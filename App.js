@@ -43,7 +43,6 @@ const firebaseCredentials = Platform.select({
   ios: 'https://invertase.link/firebase-ios',
   android: 'https://invertase.link/firebase-android',
 });
-
 const MyDrawerNavigator = createDrawerNavigator({
   Chat: {
     screen: StackNavigator,

@@ -10,6 +10,6 @@ export default createMaterialTopTabNavigator(
     tabBarOptions: {
         indicatorStyle: { backgroundColor: 'white' },
         labelStyle: { fontSize: 14, fontWeight: 'bold' },
-        tabStyle: {height:55}
+        tabStyle: {height:50}
     },
 });
