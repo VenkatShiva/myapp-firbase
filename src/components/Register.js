@@ -135,6 +135,8 @@ class Register extends Component {
                 
                 <ScrollView 
                     style={[styles.maxWidth,{paddingTop:15,maxHeight:100,minHeight:100}]}
+                    scrollEnabled={false}
+                    showsVerticalScrollIndicator={false}
                     >
                         <Text style={styles.welcome}>MyApp Welcoming You</Text>
                         <Text style={[styles.textFont,{alignSelf:"center",fontSize:25,color:"black"}]}>Glad to see you here</Text>
