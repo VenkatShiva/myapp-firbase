@@ -15,7 +15,7 @@ import { StyleSheet,
   StatusBar,
  } from 'react-native';
 
-import firebase from '@react-native-firebase/app';
+import firebase from '@react-native-firebase/auth';
 import { connect }  from 'react-redux';
 import { createAppContainer } from "react-navigation";
 import { createDrawerNavigator, DrawerItems} from "react-navigation-drawer";
@@ -126,6 +126,9 @@ const MyStackNavigator  = createStackNavigator({
 const MyApp = createAppContainer(MyStackNavigator);
 
 class App extends Component {
+  componentDidMount(){
+    console.log(firebase.auth);
+  }
   render() {
     return (
       <View style={styles.container}>
