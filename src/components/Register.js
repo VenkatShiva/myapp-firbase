@@ -130,7 +130,7 @@ class Register extends Component {
     let inputs = Array(6).fill(0);
     // console.log("state-->",this.state);
     return (
-        <ImageBackground resizeMode={'cover'}  source={require('../../assets/images/background.png')} style={{flex:1,backgroundColor:"#8cbeff",height:dimensions.height-50,width:dimensions.width}}>
+        <ImageBackground resizeMode={'cover'}  source={require('../../assets/images/background.png')} style={styles.backgroundImage}>
             <KeyboardAvoidingView style={styles.register} enabled>
                 
                 <ScrollView 
@@ -139,7 +139,7 @@ class Register extends Component {
                     showsVerticalScrollIndicator={false}
                     >
                         <Text style={styles.welcome}>MyApp Welcoming You</Text>
-                        <Text style={[styles.textFont,{alignSelf:"center",fontSize:25,color:"black"}]}>Glad to see you here</Text>
+                        <Text style={[styles.textFont,{alignSelf:"center",fontSize:20,color:"black"}]}>Glad to see you here</Text>
                 </ScrollView>
                 {
                     this.state.errorMessage ?  (<Text style={{color:"red",fontFamily:"Bitter-Regular"}}>{this.state.errorMessage}</Text>)   : null 
@@ -354,14 +354,15 @@ export default  connect(mapStateToProps,{setMobileNumber})(Register);
 const width = Math.round(dimensions.width*9/10);
 const styles = StyleSheet.create({
   backgroundImage:{
-    flex:1,
+  flex:1,
     backgroundColor:"#8cbeff",
-    position:"absolute"
-  },
+    height:dimensions.height-50,
+    width:dimensions.width
+ },
   maxWidth:{
     width,
     maxWidth: 350,
-    paddingHorizontal:10,
+    paddingHorizontal:5,
  },
  register:{
     flex:1,
@@ -369,7 +370,7 @@ const styles = StyleSheet.create({
     alignItems:"center",
  },
  welcome:{
-    fontSize:30,
+    fontSize:25,
     color:"black",
     fontFamily: "LobsterTwo-BoldItalic",
     alignSelf:"center",
@@ -380,7 +381,7 @@ const styles = StyleSheet.create({
  textFont:{
     color:"#2c2c2c",
     paddingVertical:10,
-    fontSize: 20,
+    fontSize: 17,
     fontFamily:"Bitter-Regular",
     textShadowColor:"#9e9d9d",
     textShadowOffset:{width:1,height:2},

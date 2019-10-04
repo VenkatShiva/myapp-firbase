@@ -128,7 +128,7 @@ class LoginPage extends Component {
                     keyboardShouldPersistTaps="never"
                     keyboardDismissMode="on-drag">
                     <Text style={styles.welcome}>Welcome to MyApp</Text>
-                    <Text style={[styles.textFont,{alignSelf:"center",fontSize:25,color:"black"}]}>Login Here</Text>
+                    <Text style={[styles.textFont,{alignSelf:"center",fontSize:20,color:"black"}]}>Login Here</Text>
                     <Text style={[styles.textFont,this.state.focus.mobile ? {color:"#0000ff"}:{}]}>Enter your mobile number *</Text>
                     <View style={[styles.numberField,this.state.isMobileEntered? {opacity:0.7}:{}, this.state.focus.mobile ? {borderColor:"#0000ff",borderWidth:2}:{}]}>
                         <Picker
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
       alignItems:"center",
   },
   welcome:{
-      fontSize:30,
+      fontSize:25,
       color:"black",
       fontFamily: "LobsterTwo-BoldItalic",
       alignSelf:"center",
@@ -325,7 +325,7 @@ const styles = StyleSheet.create({
   textFont:{
     color:"#2c2c2c",
     paddingVertical:10,
-    fontSize: 20,
+    fontSize: 17,
     fontFamily:"Bitter-Regular",
     textShadowColor:"#9e9d9d",
     textShadowOffset:{width:1,height:2},
